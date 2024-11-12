@@ -213,3 +213,81 @@ body {
 .post-review-button:hover {
   background-color: #3e575b;
 }
+
+
+    /* Navbar styling */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color:#F8F1EC;
+      color: #fff;
+    }
+
+    /* Logo styling */
+.navbar .logo {
+  font-size: 1.8rem;         /* Size of the logo text */
+  font-weight: bold;         /* Bold font weight */
+  color: #fff;               /* Logo color */
+  text-transform: uppercase; /* Make logo text uppercase */
+  letter-spacing: 2px;       /* Add space between letters for style */
+  display: flex;             /* Flex display for alignment */
+  align-items: center;       /* Center logo content vertically */
+}
+
+.navbar .logo img {
+  height: 70px;              /* Set image height */
+  margin-right: 50px;        /* Add space between image and text */
+  border-radius: 40px; 
+       /* Optional: rounded corners for logo image */
+       margin-top: 2px;
+       
+}
+
+/* Logo hover effect */
+.navbar .logo:hover {
+  color: #f9a826;            /* Change logo color on hover */
+  cursor: pointer;           /* Change cursor to pointer */
+}
+
+/* Adjust logo on smaller screens */
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 1.5rem;       /* Slightly smaller logo text for mobile */
+  }
+}
+
+
+    .navbar .search-bar {
+      flex: 1;
+      margin: 0 2rem;
+    }
+
+    .navbar .search-bar input[type="text"] {
+      width: 500px;
+      padding: 0.5rem;
+      font-size: 1rem;
+    margin-left: 300px;
+    border-radius: 5px;
+    border-color:#3e575b;
+    }
+
+    
+    
+
+    .navbar .user-signup a {
+      color:white;
+      background-color:#eebe2d;
+      padding: 0.6rem 1rem;
+      text-decoration: none;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    
+
+    .navbar .user-signup a:hover {
+      background-color: #3e575b;
+    }

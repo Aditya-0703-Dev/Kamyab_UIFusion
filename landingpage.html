@@ -10,8 +10,29 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-
+      background-size: cover;
+      background-position: center;
+      transition: background 1s ease-in-out;
     }
+
+    body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* Optional: Adjust color and opacity */
+    z-index: -1;  /* Ensure it sits below content */
+    opacity: 0;  /* Start with the overlay hidden */
+    transition: opacity 1s ease-in-out; /* Fade transition for the overlay */
+}
+
+/* When adding a class or triggering an event to fade */
+body.fade-in::after {
+    opacity: 1; /* Show the fade effect */
+}
+
     #card-container {
   display: flex;
   justify-content: center;
@@ -19,6 +40,7 @@
   gap: 46px;
   padding: 20px;
   max-width: 1200px;
+  margin: auto;
 }
 
 .place-card {
@@ -26,7 +48,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  width: 210px;
+  width: 250px;
   cursor: pointer;
   transition: transform 0.2s ease;
   text-decoration: none;
@@ -174,6 +196,7 @@
     
     <div class="logo">
     <img src="./Assets/subtle travel blog logo.png" alt=""></div>
+    <p style="color:black; font-size: 24px;" >Ghumakkad</p>
     
 
     <div class="search-bar">

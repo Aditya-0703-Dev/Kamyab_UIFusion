@@ -5,15 +5,15 @@ const places = [
       description: "The City of Lights, known for its romantic ambiance and rich history.",
     },
     {
-        name: "Qutub minar",
+        name: "Qutub Minar",
           image: "https://media.istockphoto.com/id/1160975059/photo/qutub-minar-and-its-monuments-delhi.jpg?s=1024x1024&w=is&k=20&c=BhuKUL1LK5tdBzLU9j3D_p5YbDmDgnZN6j1XY9WZcx4=",
-          description: "The City of battles, known for its ancient history.",
+          description: "The Place of battles, known for its ancient history.",
     },
     
     {
-    name: "Tajmahal",
+    name: "Taj Mahal",
       image: "https://media.istockphoto.com/id/519330110/photo/taj-mahal-agra-india-monument-of-love-in-blue-sky.jpg?s=2048x2048&w=is&k=20&c=IvXaJ9sZ6DWp3wwnK_j-k_eyaL_Lu61ym1Ejm-T7IaM=",
-      description: "The City of Loves, known for its romantic ambiance and rich history.",
+      description: "The Place of Loves, known for its romantic ambiance and rich history.",
     },
     {
         name: "New York",
@@ -49,19 +49,36 @@ const places = [
   ];
   
   const cardContainer = document.getElementById('card-container');
+  const body = document.body;
   
   places.forEach(place => {
     const card = document.createElement('a');
     card.classList.add('place-card');
     card.href = `place.html?name=${encodeURIComponent(place.name)}`; // Link to individual page
   
+    card.classList.add('card');
+
+    // Set the HTML content for each card
     card.innerHTML = `
-      <img src="${place.image}" alt="${place.name}" class="place-image">
-      <div class="place-content">
-        <h2 class="place-name">${place.name}</h2>
-        <p class="place-description">${place.description}</p>
-      </div>
+        <img src="${place.image}" alt="${place.name}" class="place-image">
+        <div class="place-content">
+            <h2 class="place-name">${place.name}</h2>
+            <p class="place-description">${place.description}</p>
+        </div>
     `;
+
+    card.addEventListener('mouseenter', function() {
+      body.style.backgroundImage = `url(${place.image})`;
+      document.body.classList.add('fade-in');
+  });
+
+  // Remove the background image when the hover ends
+  card.addEventListener('mouseleave', function() {
+      body.style.backgroundImage = '';
+      document.body.classList.remove('fade-in');
+  });
   
     cardContainer.appendChild(card);
   });
+
+  
