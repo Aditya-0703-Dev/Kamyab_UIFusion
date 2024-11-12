@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Details</title>
+  <link rel="stylesheet" href="./StyleSheets/places-style.css">
+</head>
+<body>
+  <div class="carousel-container">
+    <h1 id="place-name" class="place-name-overlay">Place Name</h1>
+    <div class="carousel">
+        <button class="carousel-button left-button" id="prev-button">&#10094;</button>
+        <div class="carousel-images">
+          <!-- <img src="https://source.unsplash.com/600x400/?landscape1" alt="User image 1">
+          <img src="https://source.unsplash.com/600x400/?landscape2" alt="User image 2">
+          <img src="https://source.unsplash.com/600x400/?landscape3" alt="User image 3"> -->
+        </div>
+        <button class="carousel-button right-button" id="next-button">&#10095;</button>
+    </div>
+  </div>
+
+  <div class="place-description-container">
+    <p id="place-description">A description of the place goes here...</p>
+    <!-- <p class="generic-info">Explore this amazing place with a vibrant culture and captivating history!</p> -->
+  </div>
+
+  <div class="location-tab">
+    <h2>Location</h2>
+    <p class="location-info">Address: 123 Main St, Sample City, Country</p>
+    <div class="map-placeholder">
+      <p>Map Placeholder</p>
+      <!-- Insert actual map or map API if needed -->
+    </div>
+  </div>
+
+  <!-- New Reviews Tab Section -->
+  <div class="reviews-tab">
+    <h2>Blogs</h2>
+    <div class="reviews-container">
+      <!-- Placeholder reviews (replace with dynamically loaded reviews if available) -->
+      <div class="review">
+        <h3>John Doe</h3>
+        <p>This place is amazing! The scenery is breathtaking, and the atmosphere is peaceful.</p>
+      </div>
+      <div class="review">
+        <h3>Jane Smith</h3>
+        <p>A wonderful destination for a weekend getaway. Highly recommended!</p>
+      </div>
+      <!-- More reviews would go here -->
+    </div>
+    <button class="post-review-button">Share Your Story!</button>
+  </div>
+
+
+  <script src="./Scripts/place-script.js"></script>
+</body>
+</html>
